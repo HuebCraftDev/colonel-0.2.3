@@ -121,12 +121,16 @@ dependencies {
 }
 
 tasks.withType(ProcessResources::class).configureEach {
-    filesMatching("fabric.mod.json") {
-        expand("project" to project)
-        name = "fabric.mod.json"
-    }
+    val props = mapOf("project" to project)
 
     filesMatching("*.mixins.json") {
-        expand("project" to project)
+        expand(props)
+    }
+    filesMatching("fabric.mod.yml") {
+        expand(props)
+        convertFormat(ConfigFormats.YAML, ConfigFormats.JSON)
+        name = "fabric.mod.json"
+
+        //name = "fabric.mod.json"
     }
 }

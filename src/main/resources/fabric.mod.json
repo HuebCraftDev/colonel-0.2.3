@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "${project.rootProject.name.toLowerCase()}",
+  "version": "${project.version}",
+  "name": "Colonel",
+  "authors": [
+    "zml"
+  ],
+  "contact": {
+    "homepage": "${project.indra.scm().get().url()}",
+    "issues": "${project.indra.issues().get().url()}",
+    "sources": "${project.indra.scm().get().url()}"
+  },
+  "license": "${project.indra.license().get().spdx()}",
+  "custom": {
+    "modmenu": {
+      "badges": [
+        "library"
+      ]
+    }
+  },
+  "entrypoints": {
+    "main": [
+      "ca.stellardrift.colonel.impl.Colonel"
+    ],
+    "preLaunch": [
+      "ca.stellardrift.colonel.impl.BrigadierMixinEntry"
+    ]
+  },
+  "mixins": [
+    "${project.rootProject.name.toLowerCase()}.mixins.json",
+    "${project.rootProject.name.toLowerCase()}.accessor.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "minecraft": "*"
+  },
+  "suggests": {
+    "fabric-networking-api-v1": "*"
+  }
+}

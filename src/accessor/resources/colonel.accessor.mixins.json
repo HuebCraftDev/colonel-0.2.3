@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "ca.stellardrift.colonel.mixin",
+  "refmap": "${project.name}-accessor-refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AccessorRequiredArgumentBuilder"
+  ]
+}

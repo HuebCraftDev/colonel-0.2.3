@@ -1,0 +1,2 @@
+# Automatically convert, even when `core.autocrlf` is unset
+* text=auto

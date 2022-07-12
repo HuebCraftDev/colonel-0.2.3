@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "ca.stellardrift.colonel.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinCommandManager",
+    "MixinCommandNode",
+    "MixinServerPlayerEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

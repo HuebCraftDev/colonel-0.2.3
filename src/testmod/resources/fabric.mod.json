@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "${project.rootProject.name.toLowerCase()}-testmod",
+  "version": "${project.version}",
+  "name": "${project.rootProject.name} Testmod",
+  "authors": [
+    "zml"
+  ],
+  "contact": {
+    "homepage": "${project.indra.scm().get().url()}",
+    "issues": "${project.indra.issues().get().url()}",
+    "sources": "${project.indra.scm().get().url()}"
+  },
+  "license": "${project.indra.license().get().spdx()}",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "ca.stellardrift.colonel.test.ServerArgumentTester"
+      }
+    ]
+  },
+  "depends": {
+    "fabric-networking-api-v1": "*",
+    "fabric-command-api-v1": "*",
+    "fabricloader": ">=0.4.0",
+    "colonel": "*",
+    "minecraft": "*"
+  }
+}

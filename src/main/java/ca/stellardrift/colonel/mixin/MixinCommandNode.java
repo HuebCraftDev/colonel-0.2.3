@@ -29,8 +29,9 @@ public class MixinCommandNode<S> {
     // while this fix was originally provided as a performance boost,
     // our primary goal here is to make redirects not dependent on alphabetical order.
     // this should have no effect on 1.17+, where this fix has been applied directly
+    /*
     @Inject(method = "addChild", at = @At(value = "INVOKE", target = "Ljava/util/Map;entrySet()Ljava/util/Set;"), cancellable = true, require = 0)
     private void colonel$dontSortChildren(final CommandNode<S> child, final CallbackInfo ci) {
         ci.cancel();
-    }
+    }*/
 }

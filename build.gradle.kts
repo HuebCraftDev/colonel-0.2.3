@@ -4,7 +4,6 @@ import ca.stellardrift.build.configurate.transformations.convertFormat
 plugins {
     val opinionatedVersion = "5.0.1"
     val indraVersion = "2.1.1"
-    //id("ca.stellardrift.opinionated.fabric") version opinionatedVersion
     id("ca.stellardrift.configurate-transformations") version opinionatedVersion
     id("net.kyori.indra.publishing") version indraVersion
     id("fabric-loom") version "0.12-SNAPSHOT"
@@ -46,6 +45,7 @@ indra {
     }
 
 }*/
+
 publishing {
     publications {
         create<MavenPublication>("colonel") {
@@ -130,7 +130,5 @@ tasks.withType(ProcessResources::class).configureEach {
         expand(props)
         convertFormat(ConfigFormats.YAML, ConfigFormats.JSON)
         name = "fabric.mod.json"
-
-        //name = "fabric.mod.json"
     }
 }
